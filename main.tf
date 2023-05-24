@@ -10,7 +10,7 @@ module "subnets" {
 
   for_each = var.subnets
   vpc_id = aws_vpc.main.id
-  cidr_block = each.value[cidr_block]
+  cidr_block = each.value["cidr_block"]
   name = each.value["name"]
   azs = each.value["azs"]
 
